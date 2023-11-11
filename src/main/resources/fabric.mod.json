@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "daily-meal",
+	"version": "${version}",
+	"name": "Daily Meal",
+	"description": "Hunger reworked into a day-to-day bonus.",
+	"authors": [
+		"Estecka"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/daily-meal",
+		"sources": "https://github.com/Estecka/mc-Daily-Meal"
+	},
+	"license": "GNU AGPLv3",
+	"icon": "assets/daily-meal/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"tk.estecka.dailymeal.DailyMeal"
+		]
+	},
+	"mixins": [
+		{ "config": "daily-meal.client.mixins.json", "environment": "client" },
+		"daily-meal.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.24",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"appleskin": "*"
+	}
+}

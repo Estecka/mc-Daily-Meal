@@ -1,0 +1,9 @@
+{
+	"dailyMeal.sleep.starving": "You may not rest now; you are starving",
+	"gamerule.dailyMeal.dailyBonusDuration": "Daily Meal effect duration",
+	"gamerule.dailyMeal.dailyBonusDuration.description": "How many in-game days should the effects last.",
+	"gamerule.dailyMeal.sleepFoodCost": "Sleep Food Cost",
+	"gamerule.dailyMeal.sleepFoodCost.description": "How many food points are consumed upon waking up.",
+	"gamerule.dailyMeal.regenSaturationRequirement": "Natural Regeneration cost",
+	"gamerule.dailyMeal.regenSaturationRequirement.description": "How many Saturation points are required to be granted a regen upon waking up."
+}

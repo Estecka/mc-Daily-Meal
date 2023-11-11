@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"package": "tk.estecka.dailymeal.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"CakeBlockMixin",
+		"IFoodComponentAccessor",
+		"LivingEntityMixin",
+		"PlayerEntityMixin",
+		"ServerPlayerEntityMixin",
+		"ServerWorldMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
