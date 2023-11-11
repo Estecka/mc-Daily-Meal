@@ -27,5 +27,4 @@ The stats of most vanilla food were adjusted such that:
 - The Beetroot Soup (non-stackable) now requires multiple ingredients to craft.
 
 ### Other changes
-- Fixes an issue that causes bonus hearts to be emptied when the Health Boost Effect is reapplied.
 - _(Clientside)_ The hunger bar no longer wiggles when you have no saturation. Instead, it wiggles when you don't have enough food to sleep.
