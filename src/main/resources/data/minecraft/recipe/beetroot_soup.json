@@ -5,7 +5,7 @@
 		{ "item": "minecraft:bowl" },
 		{ "item": "minecraft:baked_potato" },
 		{ "item": "minecraft:carrot" },
-		{ "item": "minecraft:brown_mushroom" },
+		{ "tag":  "dailymeal:mushrooms" },
 		{ "item": "minecraft:beetroot" },
 		{ "item": "minecraft:beetroot" },
 		{ "item": "minecraft:beetroot" }
