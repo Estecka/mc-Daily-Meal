@@ -1,6 +1,7 @@
 package tk.estecka.dailymeal;
 
 import net.minecraft.component.type.FoodComponent;
+import net.minecraft.entity.player.HungerConstants;
 import tk.estecka.dailymeal.mixin.IFoodComponentAccessor;
 import static net.minecraft.component.type.FoodComponents.*;
 
@@ -19,6 +20,7 @@ public class FoodRebalance
 		setEdible(true, MUSHROOM_STEW, BEETROOT_SOUP, RABBIT_STEW, SUSPICIOUS_STEW, CAKE_SLICE);
 	}
 
+	@SuppressWarnings("unused")
 	static private void	setHunger(int hunger, FoodComponent... foods){
 		for (FoodComponent f : foods)
 			((IFoodComponentAccessor)(Object)f).setNutrition(hunger);
@@ -26,7 +28,7 @@ public class FoodRebalance
 
 	static private void	setQuality(float quality, FoodComponent... foods){
 		for (FoodComponent f : foods)
-			((IFoodComponentAccessor)(Object)f).setSaturation(quality);
+			((IFoodComponentAccessor)(Object)f).setSaturation(HungerConstants.calculateSaturation(f.nutrition(), quality));
 	}
 
 	static private void	setEdible(boolean setEdible, FoodComponent... foods){
