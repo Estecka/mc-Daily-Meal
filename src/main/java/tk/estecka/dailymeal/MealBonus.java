@@ -17,7 +17,8 @@ public class MealBonus
 		final HungerManager hunger = player.getHungerManager();
 		final GameRules rules = player.getWorld().getGameRules();
 
-		final boolean doRegen = rules.getBoolean(MealRules.NATURAL_REGENERATION);
+		final boolean doRegen   = rules.getBoolean(MealRules.NATURAL_REGENERATION);
+		final boolean doHpBoost = rules.getBoolean(MealRules.DO_HEALTHBOOST);
 		final int duration = (int)(DAILIGHT_CYCLE_DURATION * rules.get(MealRules.DAILY_BONUS_DURATION).get());
 		final int foodCost = rules.getInt(MealRules.SLEEP_COST);
 
@@ -34,7 +35,7 @@ public class MealBonus
 			player.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, duration, 0, false, false));
 		}
 		
-		if (isFull && hunger.getSaturationLevel() >= 4){
+		if (doHpBoost && isFull && hunger.getSaturationLevel() >= 4){
 			int potency = (int)(hunger.getSaturationLevel() / 4) - 1;
 			player.addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, duration, potency, false, false));
 		}
