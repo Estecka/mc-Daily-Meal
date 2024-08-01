@@ -1,23 +1,28 @@
 # Daily Meal
 
-A hunger rework that brings food away from the battlefield and back at home.
+A hunger rework that aims to brings food away from the field and back at home.
 
-Being at full hunger no longer brings any immediate advantage. Instead, food is consumed when sleeping, in exchange for day-long bonuses.
+Eating and being at full hunger no longer brings any immediate advantage. Instead, the food bar is consumed when sleeping, in exchange for day-long bonuses.
+
+This mod was balanced around a single-player experience; player who don't participate in skipping the nigh may end up disadvantaged.
 
 ## Mechanics
 ### Sleeping
-All food-related bonuses are cashed-out upon skipping the night. Sleeping requires at least 6 food points. It consumes all Saturation, and some of food points down to a minimum of 2.
+All food-related bonuses are cashed-out upon skipping the night.
+Sleeping requires at least 3 food pips (same as for sprinting), but may consume a different amount.
 
-Sleeping with any amount of food will immediately heal you back to full.
+Sleeping will immediately heal you back to full.
 
-Sleeping with a full hunger bar will grant you **Regeneration**.
-Additionally, a **Health Boost** of varying potency will be granted based on how much Saturation you have, up to +10 hearts.
+Sleeping with a full hunger bar will grant you **Regeneration I**.
+
+All Saturation is consumed in exchange for a **Health Boost** of varying potency, up to +10 hearts.
 
 
 ### Gamerules
 - `naturalRegeneration` _(Vanilla. Default True)_ now controls whether sleeping provides any healing and regeneration.
-- `dailyMeal.dailyBonusDuration` _(Default 1.0)_ controls how many in-game days the bonuses last.
-- `dailyMeal.sleepFoodCost` _(Default 12)_ The amount of food points consumed when sleeping.
+- `dailyMeal.doHealthBoost` _(Default true)_ Whether sleeping grants any health boost. 
+- `dailyMeal.dailyBonusDuration` _(Default 3)_ How many in-game days the bonuses last. The default of 3 aligns with the apparition of phantoms. 
+- `dailyMeal.sleepFoodCost` _(Default 12)_ The amount of food points (half-pip) consumed when sleeping.
 
 ### Food Rebalance
 The stats of most vanilla food were adjusted such that:
