@@ -10,16 +10,16 @@ import net.minecraft.block.CakeBlock;
 import tk.estecka.dailymeal.FoodRebalance;
 
 @Mixin(CakeBlock.class)
-public class CakeBlockMixin 
+public class CakeBlockMixin
 {
 	@ModifyArg( method="tryEat", at=@At( value="INVOKE", target="net/minecraft/entity/player/PlayerEntity.canConsume (Z)Z") )
 	static private boolean isEdible(boolean original){
-		return FoodRebalance.CAKE_SLICE.isAlwaysEdible();
+		return FoodRebalance.CAKE_SLICE.canAlwaysEat();
 	}
 
 	@ModifyArgs( method="tryEat", at=@At( value="INVOKE", target="net/minecraft/entity/player/HungerManager.add (IF)V") )
 	static private void foodValue(Args arguments){
-		arguments.set(0, (int)FoodRebalance.CAKE_SLICE.getHunger());
-		arguments.set(1, (float)FoodRebalance.CAKE_SLICE.getSaturationModifier());
+		arguments.set(0, (int)FoodRebalance.CAKE_SLICE.nutrition());
+		arguments.set(1, (float)FoodRebalance.CAKE_SLICE.saturation());
 	}
 }
