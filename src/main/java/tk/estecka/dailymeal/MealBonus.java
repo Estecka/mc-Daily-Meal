@@ -15,7 +15,7 @@ public class MealBonus
 
 	static public void	ApplyMealBonus(ServerPlayerEntity player) {
 		final HungerManager hunger = player.getHungerManager();
-		final GameRules rules = player.getWorld().getGameRules();
+		final GameRules rules = player.getServer().getGameRules();
 
 		final boolean doRegen   = rules.getBoolean(MealRules.NATURAL_REGENERATION);
 		final boolean doHpBoost = rules.getBoolean(MealRules.DO_HEALTHBOOST);

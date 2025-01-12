@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.7-SNAPSHOT'
+	id 'fabric-loom' version '1.9-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -22,12 +22,24 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"template-mod" {
+		"daily-meal" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
 	}
 
+	runs {
+		client {
+			configName "Client"
+			programArgs "--username"
+			programArgs "Dev"
+			runDir "run/client"
+		}
+		server {
+			configName "Server"
+			runDir "run/server"
+		}
+	}
 }
 
 dependencies {
@@ -38,7 +50,6 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
 }
 
 processResources {

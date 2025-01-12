@@ -7,3 +7,5 @@ Initial release
 - Health Boost bonus now has a separate gamerule.
 - Gamerules from the mod now have their own category.
 - The server now provides missing translations to vanilla clients.
+## 1.2.0
+- Bonuses will be applied after sleeping long enough, even if the night cannot be skipped.

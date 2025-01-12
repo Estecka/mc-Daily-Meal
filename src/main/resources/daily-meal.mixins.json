@@ -6,8 +6,7 @@
 		"CakeBlockMixin",
 		"IFoodComponentAccessor",
 		"PlayerEntityMixin",
-		"ServerPlayerEntityMixin",
-		"ServerWorldMixin"
+		"ServerPlayerEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
