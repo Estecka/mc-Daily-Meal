@@ -25,10 +25,13 @@
 		"daily-meal.mixins.json"
 	],
 	"depends": {
-		"minecraft": ">=1.21.0 <1.21.2",
+		"minecraft": "~1.21.2",
 		"fabricloader": ">=0.16.10",
 		"fabric-api": "*",
 		"java": ">=21"
+	},
+	"recommends": {
+		"minecraft": "~1.21.4"
 	},
 	"suggests": {
 		"appleskin": "*"

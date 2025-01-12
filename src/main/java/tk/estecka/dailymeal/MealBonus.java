@@ -7,6 +7,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.HungerManager;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.GameRules;
+import tk.estecka.dailymeal.mixin.IHungerManagerAccessor;
 
 public class MealBonus 
 {
@@ -40,7 +41,7 @@ public class MealBonus
 			player.addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, duration, potency, false, false));
 		}
 
-		hunger.setExhaustion(0);
+		((IHungerManagerAccessor)hunger).setExhaustion(0);
 		hunger.setSaturationLevel(0);
 	}
 }

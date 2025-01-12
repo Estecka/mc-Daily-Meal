@@ -2,13 +2,13 @@
 	"type": "minecraft:crafting_shapeless",
 	"category": "misc",
 	"ingredients": [
-		{ "item": "minecraft:bowl" },
-		{ "item": "minecraft:baked_potato" },
-		{ "item": "minecraft:carrot" },
-		{ "tag":  "dailymeal:mushrooms" },
-		{ "item": "minecraft:beetroot" },
-		{ "item": "minecraft:beetroot" },
-		{ "item": "minecraft:beetroot" }
+		"minecraft:bowl",
+		"minecraft:baked_potato",
+		"minecraft:carrot",
+		"#dailymeal:mushrooms",
+		"minecraft:beetroot",
+		"minecraft:beetroot",
+		"minecraft:beetroot"
 	],
 	"result": {
 		"id": "minecraft:beetroot_soup"

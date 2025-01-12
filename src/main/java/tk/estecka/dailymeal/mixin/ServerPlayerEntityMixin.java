@@ -37,7 +37,7 @@ extends PlayerEntity
 	public void disgest(CallbackInfo ci) {
 		// Cannot succeed if the night will be skipped immediately upon sleeping enough.
 		if (this.TryDigest())
-			this.sendMessage(DailyMeal.ServersideTranslatable("dailyMeal.sleep.complete"));
+			this.sendMessage(DailyMeal.ServersideTranslatable("dailyMeal.sleep.complete"), false);
 	}
 
 	@Inject( method="wakeUp(ZZ)V", at=@At("HEAD") )
